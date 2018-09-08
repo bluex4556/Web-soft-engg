@@ -1,0 +1,10 @@
+{% if facultylist %}
+
+    <ul>
+    {% for faculty in facultylist %}
+        <li><a href= "{% url 'polls:detail' faculty.id%}">{{ faculty.faculty_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
